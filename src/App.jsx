@@ -1,13 +1,13 @@
-  function App() { 
+import SignInPage from "./pages/signin";
+import SignUpPage from "./pages/signUp";
+
+const App = () => {
   return (
-	  <>
-	    <h1 className="text-3xl font-bold underline">
-	      Dimmu Borgir
-	    </h1>
-	  </>
-  )
-}
+    <div className="flex justify-center min-h-screen items-center">
+      <SignInPage />
+	  <SignUpPage />
+    </div>
+  );
+};
 
-export default App
-
-  
+export default App;
