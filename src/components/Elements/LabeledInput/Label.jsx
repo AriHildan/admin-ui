@@ -1,19 +1,19 @@
-const Label = () => {
-  return (
-    <>
-    <div className="mb-6">
-        <label htmlFor="email" className="block text-sm mb-2">
-            Email Address
-        </label>
-    </div>
-    <div className="mb-6">
-        <label htmlFor="password" className="block text-sm mb-2">
-            Password
-        </label>
+import PropTypes from 'prop-types';
 
-    </div>
-    </>
+const Label = (props) => {
+  const { htmlFor, children } = props;
+
+  return (
+    <label htmlFor={htmlFor} className="block text-sm mb-2">
+      {children}
+    </label>
   );
+};
+
+// Define prop types
+Label.propTypes = {
+  htmlFor: PropTypes.string.isRequired, // htmlFor is required
+  children: PropTypes.node.isRequired, // children is required
 };
 
 export default Label;
