@@ -6,12 +6,6 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
   { ignores: ['dist'] },
-  js.configs.recommended,
-    {
-        rules: {
-            "no-unused-vars": "warn"
-        }
-    },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -40,6 +34,5 @@ export default [
         { allowConstantExport: true },
       ],
     },
-
   },
 ]

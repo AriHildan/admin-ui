@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -26,12 +27,12 @@ export default {
           "red": "#4DAF6E"
         } 
       },
-      
       fontFamily: {
         body: ['Inter'],
-        poppins: ['Poppins']
+        poppins: ['Poppins'],
       }
     },
   },
   plugins: [],
 }
+
