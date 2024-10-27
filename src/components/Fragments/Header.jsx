@@ -1,4 +1,4 @@
-import Input from '../Elements/LabeledInput/Input';
+import Input from "../Elements/LabeledInput/Input";
 import { FaBell } from 'react-icons/fa';
 
 const Header = () => {
