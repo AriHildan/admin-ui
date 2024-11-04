@@ -10,12 +10,12 @@ const MainLayout = (props) => {
       <Navbar/>
       {/* navbar end*/}
       <div className="w-screen">
-        {/* header start*/}
-        <Header/>
-        {/* header end*/}
-        {/* content start*/}
-        <main className="px-6 py-4">{children}</main>
-        {/* content end*/}
+      {/* header start*/}
+      <Header/>
+      {/* header end*/}
+      {/* content start*/}
+      <main className="px-6 py-4">{ children }</main>
+      {/* content end*/}
       </div>
     </div>
   );

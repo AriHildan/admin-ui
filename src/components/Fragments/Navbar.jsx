@@ -4,49 +4,49 @@ import Logo from "../Elements/Logo/index";
 
 const Navbar = () => {
   const menus = [
-    {
-      id: "overview",
-      link: "/",
-      icon: <Icon.Overview />,
-      label: "Overview",
-    },
-    {
-      id: "balance",
-      link: "/balance",
-      icon: <Icon.Balance />,
-      label: "Balance",
-    },
-    {
-      id: "transaction",
-      link: "/transaction",
-      icon: <Icon.Transaction />,
-      label: "Transactions",
-    },
-    {
-      id: "bills",
-      link: "/bills",
-      icon: <Icon.BillsIcon />,
-      label: "Bills",
-    },
-    {
-      id: "expencces",
-      link: "/expencces",
-      icon: <Icon.ExpenccesIcon />,
-      label: "Expenses",
-    },
-    {
-      id: "goals",
-      link: "/goals",
-      icon: <Icon.GoalsIcon />,
-      label: "Goals",
-    },
-    {
-      id: "setting",
-      link: "/setting",
-      icon: <Icon.SettingsIcon />,
-      label: "Settings",
-    },
-  ];
+      {
+        id: "overview",
+        link: "/",
+        icon: <Icon.Overview />,
+        label: "Overview",
+      },
+      {
+        id: "balance",
+        link: "/balance",
+        icon: <Icon.Balance />,
+        label: "Balance",
+      },
+      {
+        id: "transaction",
+        link: "/transaction",
+        icon: <Icon.Transaction />,
+        label: "Transaction",
+      },
+      {
+        id: "bills",
+        link: "/bills",
+        icon: <Icon.Bills />,
+        label: "Bills",
+      },
+      {
+        id: "expense",
+        link: "/expense",
+        icon: <Icon.Expencces />,
+        label: "Expenses",
+      },
+      {
+        id: "goals",
+        link: "/goals",
+        icon: <Icon.Goals />,
+        label: "Goals",
+      },
+      {
+        id: "setting",
+        link: "/setting",
+        icon: <Icon.Settings />,
+        label: "Settings",
+      },
+    ];
 
   return (
     <nav className="bg-defaultBlack text-special-bg2 sm:w-72 w-36 min-h-screen px-7 py-12 flex flex-col justify-between">
