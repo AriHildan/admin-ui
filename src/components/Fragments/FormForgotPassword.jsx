@@ -1,4 +1,4 @@
-import Button from "../Elements/Button/index";
+import Button from "../Elements/Button";
 import LabeledInput from "../Elements/LabeledInput";
 import { Link } from 'react-router-dom'
 import Logo from '../Elements/Logo/index'
