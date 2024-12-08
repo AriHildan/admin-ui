@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import { BarChart } from "@mui/x-charts/BarChart";
+import React from 'react'
+import { BarChart } from '@mui/x-charts/BarChart';
 
 const chartSetting = {
     yAxis: [
@@ -28,36 +28,15 @@ export default function BarsDataset(props) {
     return (
         <BarChart
             dataset={desc.data}
-            xAxis={[
-                {
-                    scaleType: "band",
-                    dataKey: desc.dataKey,
-                    categoryGapRatio: 0.5,
-                },
-            ]}
+            xAxis={[{ scaleType: 'band', dataKey: desc.dataKey, categoryGapRatio: 0.5 }]}
             series={desc.series}
             slotProps={{
                 legend: {
                     direction: "row",
-                    position: { vertical: "top", horizontal: "right" },
-                },
+                    position: { vertical: "top", horizontal: "right" }
+                }
             }}
             {...chartSetting}
         />
     );
 }
-
-// Validasi properti menggunakan PropTypes
-BarsDataset.propTypes = {
-    desc: PropTypes.shape({
-        data: PropTypes.arrayOf(PropTypes.object).isRequired, // Data harus berupa array objek
-        dataKey: PropTypes.string.isRequired,                // dataKey harus berupa string
-        series: PropTypes.arrayOf(
-            PropTypes.shape({
-                dataKey: PropTypes.string.isRequired,         // dataKey pada series harus berupa string
-                label: PropTypes.string,                     // Label pada series (opsional)
-                fill: PropTypes.string,                      // Warna pada series (opsional)
-            })
-        ).isRequired, // Series harus berupa array objek dengan struktur di atas
-    }).isRequired, // Properti `desc` wajib diisi
-};

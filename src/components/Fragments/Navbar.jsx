@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Icon } from "../Elements/Icon";
 import Logo from "../Elements/Logo";
 const Navbar = () => {
@@ -78,7 +78,7 @@ const Navbar = () => {
         <div className="border-b my-10 border-b-special-bg"></div>
         <div className="flex justify-between">
           <div className="mx-auto sm:mx-0 self-center">
-            <img className="w-10 h-10 rounded-full object-cover" src="images/profile.png"/>
+            <img class="w-10 h-10 rounded-full object-cover" src="images/profile2.jpg"/>
           </div>
           <div className="hidden sm:block">
             <div className="text-white font-bold">Username</div>

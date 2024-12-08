@@ -1,4 +1,5 @@
-import Card from "../components/Elements/Card"
+import React from 'react'
+import Card from "../components/Elements/Card";
 import MainLayout from "../components/Layouts/MainLayout";
 
 const ExpensePage = () => {
@@ -6,7 +7,7 @@ const ExpensePage = () => {
     <MainLayout type="expense">
       {/* top content start*/}
       <div className="md:grid md:grid-cols-1 md:gap-x-6">
-      <Card
+      <Card 
            title="Expenses Comparison"
            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni neque quam alias enim ullam deserunt ducimus consequatur cumque hic voluptatem totam ab quibusdam facilis distinctio ratione, sequi vel porro eum." 
            />

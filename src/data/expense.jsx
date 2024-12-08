@@ -1,6 +1,5 @@
 import { Icon } from '../components/Elements/Icon';
 
-
 export const expensesBreakdowns = [
     {
       id: 1,

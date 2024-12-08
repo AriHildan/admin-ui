@@ -100,9 +100,9 @@ const DashboardPage = () => {
   {/* top content start*/}
   <div className="md:grid md:grid-cols-3 md:gap-x-6">
     <CardBalance/>
+    {/* <Card title="Goals" /> */}
     <CardGoal/>
     <Card title="Upcoming Bill" desc={billCard} />
-    
     <Card
       variant="md:col-span-1 md:row-span-2"
       title="Recent Transaction"
@@ -120,17 +120,17 @@ const DashboardPage = () => {
                 value={tab}
                 onClick={handleClick}
               >
-                
                 {tab}
               </button>
             ))}
           </div>
           {transactionCard}
-         
         </div>
       }
     />
-     <CardStatistic/>
+
+    {/* <Card variant="md:col-span-2" title="Statistics" /> */}
+    <CardStatistic/>
     <Card
       variant="md:col-span-2" 
       title="Expenses Breakdown"
