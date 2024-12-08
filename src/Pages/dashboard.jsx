@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import Card from "../components/Elements/Card";
 import { Icon } from '../components/Elements/Icon';
@@ -9,10 +8,6 @@ import transactions from "../data/transaction";
 import CardBalance from "../components/Fragments/Dashboard/CardBalance";
 import CardStatistic from "../components/Fragments/Dashboard/CardStatistic";
 import CardGoal from "../components/Fragments/Dashboard/CardGoal";
-=======
-import Card from "../components/Elements/Card";
-import MainLayout from "../components/Layouts/MainLayout";
->>>>>>> f6b0764778b792a0a4546ffff5908d15305072aa
 
 const DashboardPage = () => {
   const tabs = ["All", "Revenue", "Expense"];
@@ -101,7 +96,6 @@ const DashboardPage = () => {
   ));
 
   return (
-<<<<<<< HEAD
   <MainLayout type="dashboard">
   {/* top content start*/}
   <div className="md:grid md:grid-cols-3 md:gap-x-6">
@@ -145,34 +139,6 @@ const DashboardPage = () => {
   </div>
   {/* buttom content end */}
   </MainLayout>
-=======
-    <MainLayout type="dashboard">
-      {/* top content start*/}
-      <div className="md:grid md:grid-cols-3 md:gap-6">
-        <Card title="Total Balance" />
-        <Card 
-          title="Goals"
-          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolore sapiente susce..."
-        />
-        <Card title="Upcoming Bill" />
-      </div>
-      {/* top content end*/}
-      {/* bottom content start*/}
-      <div className="md:grid md:grid-cols-3 md:gap-6">
-        <div className="md:col-span-1">
-          <Card 
-            title="Recent Transaction"
-            desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic at ab, voluptates dolo..."
-          />
-        </div>
-        <div className="md:col-span-2 flex flex-col flex-1">
-          <Card title="Statistics" />
-          <Card title="Expenses Breakdown" />
-        </div>
-      </div>
-      {/* bottom content end*/}
-    </MainLayout>
->>>>>>> f6b0764778b792a0a4546ffff5908d15305072aa
   );
 };
 

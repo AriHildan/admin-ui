@@ -3,7 +3,6 @@ import { Icon } from "../Elements/Icon";
 import Logo from "../Elements/Logo";
 const Navbar = () => {
   const menus = [
-<<<<<<< HEAD
     {
       id: "overview",
       link: "/",
@@ -47,51 +46,6 @@ const Navbar = () => {
       label: "Settings",
     },
   ];
-=======
-      {
-        id: "overview",
-        link: "/",
-        icon: <Icon.Overview />,
-        label: "Overview",
-      },
-      {
-        id: "balance",
-        link: "/balance",
-        icon: <Icon.Balance />,
-        label: "Balance",
-      },
-      {
-        id: "transaction",
-        link: "/transaction",
-        icon: <Icon.Transaction />,
-        label: "Transaction",
-      },
-      {
-        id: "bills",
-        link: "/bills",
-        icon: <Icon.Bills />,
-        label: "Bills",
-      },
-      {
-        id: "expense",
-        link: "/expense",
-        icon: <Icon.Expencces />,
-        label: "Expenses",
-      },
-      {
-        id: "goals",
-        link: "/goals",
-        icon: <Icon.Goals />,
-        label: "Goals",
-      },
-      {
-        id: "setting",
-        link: "/setting",
-        icon: <Icon.Settings />,
-        label: "Settings",
-      },
-    ];
->>>>>>> f6b0764778b792a0a4546ffff5908d15305072aa
 
   return (
     <div className="bg-defaultBlack">
