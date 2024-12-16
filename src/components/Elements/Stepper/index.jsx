@@ -1,30 +1,15 @@
-<<<<<<< HEAD
-=======
-/* eslint-disable react/prop-types */
->>>>>>> 32d77f7c823ec37ea4b7b234360e60b68bdccf83
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
+
 import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-<<<<<<< HEAD
-import { ThemeContext } from '../../../context/themeContext';
-=======
-import { ThemeContext } from "../../../context/themeContext";
->>>>>>> 32d77f7c823ec37ea4b7b234360e60b68bdccf83
 
 const Stepper = (props) => {
     const { desc } = props;
 
     const theme = useTheme();
-<<<<<<< HEAD
-
-    const { theme: themeMode } = useContext(ThemeContext);
-
-=======
-    const {theme: themeMode} = useContext(ThemeContext)
->>>>>>> 32d77f7c823ec37ea4b7b234360e60b68bdccf83
     const [activeStep, setActiveStep] = useState(0);
 
     const handleNext = () => {
@@ -52,7 +37,7 @@ const Stepper = (props) => {
                         backgroundColor: "darkgray",
                     },
                     "& .MuiMobileStepper-dotActive" : {
-                        backgroundColor: themeMode.color,
+                        backgroundColor: "#299D91",
                     },
                  }}
                 nextButton={
@@ -80,4 +65,4 @@ const Stepper = (props) => {
     );
 }
 
-export default Stepper  
+export default Stepper
