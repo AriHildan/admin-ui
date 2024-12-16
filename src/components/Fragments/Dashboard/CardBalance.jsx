@@ -3,12 +3,20 @@ import accounts from "../../../data/accounts";
 import Card from "../../Elements/Card";
 import { Icon } from "../../Elements/Icon";
 import Stepper from "../../Elements/Stepper";
+<<<<<<< HEAD
 import { useContext } from "react";
+=======
+import { useContext} from "react";
+>>>>>>> 32d77f7c823ec37ea4b7b234360e60b68bdccf83
 import { ThemeContext } from "../../../context/themeContext";
 
 
 const CardBalance = () => {
+<<<<<<< HEAD
     const { theme } = useContext(ThemeContext);
+=======
+    const {theme} = useContext(ThemeContext);
+>>>>>>> 32d77f7c823ec37ea4b7b234360e60b68bdccf83
 
     const balanceCard = accounts.map((account) => (
         <div key={account.id} className={`p-2 ${theme.name}`}>

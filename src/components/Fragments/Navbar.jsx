@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NavLink } from "react-router-dom";
 import { Icon } from "../Elements/Icon";
 import Logo from "../Elements/Logo";
@@ -16,6 +17,25 @@ const Navbar = () => {
   
   const { setTheme } = useContext(ThemeContext);
 
+=======
+import {  NavLink } from "react-router-dom";
+import { Icon } from "../Elements/Icon";
+import Logo from "../Elements/Logo";
+import { useContext} from "react";
+import { ThemeContext } from "../../context/themeContext";
+const Navbar = () => {
+  //themes yang didefinisikan di component Navbar
+
+const themes = [
+  { name: "theme-green", bgcolor: "bg-[#299D91]", color: "#299D91" },
+  { name: "theme-blue", bgcolor: "bg-[#1E90FF]", color: "#1E90FF" },
+  { name: "theme-purple", bgcolor: "bg-[#6A5ACD]", color: "#6A5ACD" },
+  { name: "theme-pink", bgcolor: "bg-[#DB7093]", color: "#DB7093" },
+  { name: "theme-brown", bgcolor: "bg-[#8B4513]", color: "#8B4513" },
+];
+  
+  const { setTheme } = useContext(ThemeContext);
+>>>>>>> 32d77f7c823ec37ea4b7b234360e60b68bdccf83
   const menus = [
     {
       id: "overview",
@@ -82,6 +102,7 @@ const Navbar = () => {
           </NavLink>
         ))}
       </div>
+<<<<<<< HEAD
       
       <div className="md:flex md:gap-2">
           Themes
@@ -93,6 +114,18 @@ const Navbar = () => {
             ></div>
           ))}
         </div>
+=======
+      <div className="md:flex md:gap-2">
+  Themes
+  {themes.map((t) => (
+    <div
+      key={t.name}
+      className={`${t.bgcolor} md:w-6 h-6 rounded-md cursor-pointer mb-2`}
+      onClick={() => setTheme(t)}
+    ></div>
+  ))}
+</div>
+>>>>>>> 32d77f7c823ec37ea4b7b234360e60b68bdccf83
       <div className="sticky bottom-12">
         <div className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white">
 	          <div className="mx-auto sm:mx-0 text-primary">
