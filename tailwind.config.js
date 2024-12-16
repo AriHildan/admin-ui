@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#299D91",
+        primary: "var(--color-primary)",
         secondary: "#525256",
         defaultBlack: "#191919", 
         gray: {
@@ -23,16 +22,16 @@ export default {
           "bg2": "rgba(255, 255, 255, 0.7)",
           "bg3": "rgba(255, 255, 255, 0.08)",
           "mainBg": "#F4F5F7",
-          "green": "#E73D1C",
-          "red": "#4DAF6E"
+          "green": "#4DAF6E",
+          "red": "#E73D1C"
         } 
       },
+      
       fontFamily: {
         body: ['Inter'],
-        poppins: ['Poppins'],
+        poppins: ['Poppins']
       }
     },
   },
   plugins: [],
 }
-
