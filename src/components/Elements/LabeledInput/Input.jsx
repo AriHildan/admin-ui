@@ -1,11 +1,6 @@
-const Input = (props) => {
-  const {
-    type,
-    placeholder,
-    name,
-    variant = "bg-special-mainBg border border-gray-03",
-  } = props;
-
+// eslint-disable-next-line react/prop-types
+const Input = ({ name, type, placeholder, register}) => {
+  const variant = "bg-special-mainBg border-gray-03";
   return (
     <input
       type={type}
@@ -13,6 +8,7 @@ const Input = (props) => {
       placeholder={placeholder}
       name={name}
       id={name}
+      {...register}
     />
   );
 };
