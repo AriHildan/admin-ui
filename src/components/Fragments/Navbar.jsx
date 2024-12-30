@@ -1,4 +1,5 @@
-import { NavLink, useNavigate } from "react-router-dom";
+/* eslint-disable no-undef */
+import { NavLink } from "react-router-dom";
 import { Icon } from "../Elements/Icon";
 import Logo from "../Elements/Logo";
 // import React, { useContext } from "react";
@@ -19,9 +20,7 @@ const Navbar = () => {
   
   const { theme, setTheme } = useContext(ThemeContext);
   const { setIsLoggedIn, setName, name } = useContext(AuthContext);
-  const { setMsg, setOpen, setIsLoading } = useContext(NotifContext);
-
-  const navigate = useNavigate();
+  const {setMsg, setOpen, setIsLoading } = useContext(NotifContext);
 
   const menus = [
     {
@@ -71,7 +70,6 @@ const Navbar = () => {
   const refreshToken = localStorage.getItem("refreshToken");
 
   const Logout = async () => {
-    setIsLoading(true);
       try {
         await axios.get("https://jwt-auth-eight-neon.vercel.app/logout", {
           headers: {
@@ -79,21 +77,23 @@ const Navbar = () => {
           },
         });
 
+        setIsLoading(false);
         setOpen(true);
-        setMsg({ severity: "success", desc: "Logout Success"});
+        setMsg({ severity: "succes", desc: "Logout Succes"});
+        
+        setIsLoggedIn(false);
+        setName("");
+        localStorage.removeItem("refreshToken");
+
+        navigate("/login");
       } catch (error) {
+        setIsLoading(false);
+
         if (error.response) {
           setOpen(true);
           setMsg({ severity: "error", desc: error.response.data.msg });
         }
       }
-
-      setIsLoggedIn(false);
-      setName("");
-      setIsLoading(false);
-
-      localStorage.removeItem("refreshToken");
-      navigate("/login");
     };
   
 
@@ -142,7 +142,7 @@ const Navbar = () => {
         <div className="border-b my-10 border-b-special-bg"></div>
         <NavLink to="/profile" className="flex justify-between">
           <div className="mx-auto sm:mx-0 self-center">
-          <img class="w-10 h-10 rounded-full object-cover" src="images/profile2.jpg"/>
+          <img className="w-10 h-10 rounded-full object-cover" src="images/profile2.jpg"/>
           </div>
           <div className="hidden sm:block">
             <div className="text-white font-bold">{name}</div>
