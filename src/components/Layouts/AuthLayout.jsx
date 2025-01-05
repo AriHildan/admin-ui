@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
 import SignInPage from '../../pages/signIn'
 import Logo from '../Elements/Logo/index'
 import { useContext } from 'react'
@@ -6,6 +9,8 @@ import FormSignIn from '../Fragments/FormSignIn'
 import { Link } from 'react-router-dom'
 import SimpleBackdrop from '../Elements/Backdrop'
 import CustomizedSnackbars from '../Elements/SnackBar'
+import { motion } from "framer-motion";
+
 
 const AuthLayout = (props) => {
   const {children,type} = props;
@@ -13,8 +18,28 @@ const AuthLayout = (props) => {
 
   return (
     <div className="flex justify-center min-h-screen items-center bg-special-mainBg">
+      {isLoading && (
+        <SimpleBackdrop isLoading={isLoading} setIsLoading={setIsLoading} />
+      )}
+      {msg && (
+        <CustomizedSnackbars
+          severity={msg.severity}
+          message={msg.desc}
+          open={open}
+          setOpen={setOpen}
+        />
+      )}
     {/* container start */}
-    <div className="w-full max-w-sm">
+    <motion.div 
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.4,
+        scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+      }}
+        className="w-full max-w-sm"
+      >
+
       {isLoading && (
         <SimpleBackdrop isLoading={isLoading} setIsLoading={setIsLoading} />
       )}
@@ -34,7 +59,7 @@ const AuthLayout = (props) => {
       {/* teks start */}
       <div className="my-9 px-7 flex justify-center text-xs text-gray-03 items-center flex-col static">
         <div className="border border-gray-05 w-full"></div>
-        <div class="px-2 bg-special-mainBg absolute"> or sign in with</div>
+        <div className="px-2 bg-special-mainBg absolute"> or sign in with</div>
       </div>
       {/* teks end */}
       {/* sign in with google start */}
@@ -50,9 +75,8 @@ const AuthLayout = (props) => {
           
         >
           <svg
-            class="h-6 w-6 mr-2"
+            className="h-6 w-6 mr-2"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             width="800px"
             height="800px"
             viewBox="-0.5 0 48 48"
@@ -64,9 +88,9 @@ const AuthLayout = (props) => {
             <g
               id="Icons"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
               fill="none"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             >
               {" "}
               <g id="Color-" transform="translate(-401.000000, -860.000000)">
@@ -124,7 +148,7 @@ const AuthLayout = (props) => {
   )}
 </div>
 {/* link end */}
-    </div>
+    </motion.div>
     {/* container end */}
   </div>
   )
