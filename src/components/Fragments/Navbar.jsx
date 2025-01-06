@@ -80,7 +80,7 @@ const Navbar = () => {
         });
 
         setOpen(true);
-        setMsg({ severity: "success", desc: "Logout Success"});
+        setMsg({ severity: "success", desc: "Logout Successs"});
       } catch (error) {
         if (error.response) {
           setOpen(true);
